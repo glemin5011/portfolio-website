@@ -1,4 +1,11 @@
 .hero-container {
-  height: calc(100vh - 47px) !important;
+  // height: calc(100vh - 47px) !important;
   background-color: var(--cds-layer);
+  padding-bottom: 0rem !important;
+}
+
+.headshot-photo {
+  // height: 450px;
+  height: auto;
+  max-width: 100%;
 }
