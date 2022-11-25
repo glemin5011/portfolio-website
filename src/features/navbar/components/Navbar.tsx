@@ -17,6 +17,8 @@ import {
   Switcher,
 } from "@carbon/react/icons";
 
+import "./Navbar.scss";
+
 export function Navbar(): JSX.Element {
   const action = (input: string): void => {
     console.log(input);
