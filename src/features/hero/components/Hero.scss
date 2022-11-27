@@ -1,11 +1,16 @@
-.hero-container {
-  // height: calc(100vh - 47px) !important;
-  background-color: var(--cds-layer);
-  padding-bottom: 0rem !important;
-}
+$carbon-screen-sm: 375px;
+$carbon-screen-md: 672px;
+$carbon-screen-lg: 1056px;
+$carbon-screen-xlg: 1312px;
+$carbon-screen-max: 1584px;
 
 .headshot-photo {
   // height: 450px;
   height: auto;
   max-width: 100%;
+  display: block !important;
+
+  @media (min-width: $carbon-screen-md) and (max-width: $carbon-screen-lg) {
+    width: 600px !important;
+  }
 }

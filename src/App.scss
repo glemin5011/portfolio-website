@@ -1,0 +1,12 @@
+$carbon-screen-sm: 375px;
+$carbon-screen-md: 672px;
+$carbon-screen-lg: 1056px;
+$carbon-screen-xlg: 1312px;
+$carbon-screen-max: 1584px;
+
+.hero-container {
+  background-color: var(--cds-layer);
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+  padding-right: 0rem !important;
+}

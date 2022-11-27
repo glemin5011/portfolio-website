@@ -9,13 +9,21 @@ import {
   HeaderGlobalBar,
   HeaderGlobalAction,
   HeaderContainer,
+  SideNav,
+  SideNavItems,
+  HeaderSideNavItems,
+  useTheme,
 } from "@carbon/react";
 
 import {
   Search,
   Notification as NotificationIcon,
   Switcher,
+  Light,
+  Asleep,
 } from "@carbon/react/icons";
+import { useAppDispatch } from "../../../app/hooks/hooks";
+import { changeTheme } from "../../../app/store/appSlice";
 
 import "./Navbar.scss";
 
@@ -23,6 +31,10 @@ export function Navbar(): JSX.Element {
   const action = (input: string): void => {
     console.log(input);
   };
+
+  const { theme } = useTheme();
+
+  const dispatch = useAppDispatch();
 
   return (
     <HeaderContainer
@@ -54,7 +66,40 @@ export function Navbar(): JSX.Element {
               </HeaderMenu>
               <HeaderMenuItem href="#">Contact</HeaderMenuItem>
             </HeaderNavigation>
+            <SideNav
+              aria-label="Side navigation"
+              expanded={isSideNavExpanded}
+              isPersistent={false}
+            >
+              <SideNavItems>
+                <HeaderSideNavItems>
+                  <HeaderMenuItem href="#">Link 1</HeaderMenuItem>
+                  <HeaderMenuItem href="#">Link 2</HeaderMenuItem>
+                  <HeaderMenuItem href="#">Link 3</HeaderMenuItem>
+                  <HeaderMenu aria-label="Link 4" menuLinkName="Link 4">
+                    <HeaderMenuItem href="#">Sub-link 1</HeaderMenuItem>
+                    <HeaderMenuItem href="#">Sub-link 2</HeaderMenuItem>
+                    <HeaderMenuItem href="#">Sub-link 3</HeaderMenuItem>
+                  </HeaderMenu>
+                </HeaderSideNavItems>
+              </SideNavItems>
+            </SideNav>
             <HeaderGlobalBar>
+              {theme === "white" ? (
+                <HeaderGlobalAction
+                  aria-label="Dark Mode"
+                  onClick={() => dispatch(changeTheme({ theme: "g100" }))}
+                >
+                  <Asleep size={20} />
+                </HeaderGlobalAction>
+              ) : (
+                <HeaderGlobalAction
+                  aria-label="Light Mode"
+                  onClick={() => dispatch(changeTheme({ theme: "white" }))}
+                >
+                  <Light size={20} />
+                </HeaderGlobalAction>
+              )}
               <HeaderGlobalAction
                 aria-label="Search"
                 onClick={action("search click")}
