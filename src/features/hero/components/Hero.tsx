@@ -1,4 +1,4 @@
-import { Grid, Column } from "@carbon/react";
+import { Grid, Column, Layer } from "@carbon/react";
 // import headshot from "../../../img/headshot_no_background.png";
 import headshotBW from "../../../img/headshot_bw_no_background.png";
 
@@ -6,7 +6,7 @@ import "./Hero.scss";
 
 export function Hero(): JSX.Element {
   return (
-    <>
+    <Layer as="section" id="hero">
       <Grid>
         <Column
           sm={4}
@@ -58,6 +58,6 @@ export function Hero(): JSX.Element {
           <img src={headshotBW} className="headshot-photo" />
         </Column>
       </Grid>
-    </>
+    </Layer>
   );
 }

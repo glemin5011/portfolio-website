@@ -55,7 +55,7 @@ export function Navbar(): JSX.Element {
               isActive={isSideNavExpanded}
             />
             <HeaderName href="#" prefix="">
-              matejpalenik.com
+              Matej Palenik
             </HeaderName>
             <HeaderNavigation aria-label="matejpalenik.com">
               <HeaderMenuItem href="#">About</HeaderMenuItem>
@@ -89,6 +89,7 @@ export function Navbar(): JSX.Element {
                 <HeaderGlobalAction
                   aria-label="Dark Mode"
                   onClick={() => dispatch(changeTheme({ theme: "g100" }))}
+                  
                 >
                   <Asleep size={20} />
                 </HeaderGlobalAction>
@@ -100,25 +101,7 @@ export function Navbar(): JSX.Element {
                   <Light size={20} />
                 </HeaderGlobalAction>
               )}
-              <HeaderGlobalAction
-                aria-label="Search"
-                onClick={action("search click")}
-              >
-                <Search size={20} />
-              </HeaderGlobalAction>
-              <HeaderGlobalAction
-                aria-label="Notifications"
-                onClick={action("notification click")}
-              >
-                <NotificationIcon size={20} />
-              </HeaderGlobalAction>
-              <HeaderGlobalAction
-                aria-label="App Switcher"
-                onClick={action("app-switcher click")}
-                tooltipAlignment="end"
-              >
-                <Switcher size={20} />
-              </HeaderGlobalAction>
+              
             </HeaderGlobalBar>
           </Header>
         </>
