@@ -2,6 +2,8 @@ import {
   Grid, Column, Layer, useTheme,
 } from "@carbon/react";
 import { ReactComponent as CloudIcon } from '../../../img/cloud--services.svg'
+import { ReactComponent as DevopsIcon } from '../../../img/devops.svg'
+
 
 import "./Projects.scss";
 
@@ -43,9 +45,9 @@ export function Projects(): JSX.Element {
         <Column {...spacing} style={{ marginLeft: 'auto', marginRight: 'auto', marginBottom: '0.5rem', marginTop: '0.5rem' }}>
           <h4 style={{ display: "flex", alignItems: "center" }}>
             <span style={{ marginRight: "1rem" }}>
-              <CloudIcon height="3.5rem" style={{ fill: theme === 'white' ? 'black' : 'white' }} />
+              <DevopsIcon height="3.5rem" style={{ fill: theme === 'white' ? 'black' : 'white' }} />
             </span>
-            Cloud Native Development
+            DevOps in AWS
           </h4>
         </Column>
         <Column {...spacing} style={{ marginLeft: 'auto', marginRight: 'auto', marginBottom: '0.5rem', marginTop: '0.5rem' }}>
